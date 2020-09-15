@@ -30,8 +30,5 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message || 'Internal server error.')
 })
 
-// PORT listening (Starting server)
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-  console.log(`Listening on PORT ${PORT}`)
-})
+module.exports = app
+
