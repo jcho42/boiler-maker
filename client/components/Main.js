@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { thunkCreator } from '../reducers/reducer'
 
+import './Main.css'
+
 class Main extends Component {
   render() {
     return (

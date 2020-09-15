@@ -8,12 +8,21 @@ module.exports = {
   devtool: 'source-maps',
   module: {
     rules: [
+      // rules for babel
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
         }
+      },
+      // rules for style-loaer/css-loader
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
       }
     ]
   }
