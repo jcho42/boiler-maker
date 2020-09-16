@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 const crypto = require('crypto')
-const _ = require('lodash')
+// const _ = require('lodash')
 
 const db = require('./database')
 
@@ -42,6 +42,9 @@ const User = db.define('user', {
   },
   imageUrl: {
     type: Sequelize.TEXT
+  },
+  googleId: {
+    type: Sequelize.STRING
   }
 })
 
@@ -52,10 +55,10 @@ User.prototype.correctPassword = function(enteredPassword) {
 }
 
 // use sanitize method to omit sensitive info when sending data(srubbing)
-User.prototype.sanitize = () => {
-  // first argument is the source obj; second is  the properties to omit
-  return _.omit(this.toJSON(), ['password', 'salt'])
-}
+// User.prototype.sanitize = () => {
+//   // first argument is the source obj; second is  the properties to omit
+//   return _.omit(this.toJSON(), ['password', 'salt'])
+// }
 
 // Class methods
 // generates random salt
