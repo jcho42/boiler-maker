@@ -2,6 +2,7 @@ const { db } = require('./server/db')
 const app = require('./server')
 
 const startServer = async () => {
+  // Sync to database
   await db.sync()
   // PORT listening (Starting server)
   const PORT = process.env.PORT || 3000

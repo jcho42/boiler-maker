@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-router.use('/puppies', require('./puppies'))
+router.use('/users', require('./users'))
 
 // Error handler (404)
 router.use((req, res, next) => {

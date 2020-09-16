@@ -1,9 +1,9 @@
 const db = require('./database')
-const Puppy = require('./puppy')
+const User = require('./user')
 
 // Associations
 
 module.exports = {
   db,
-  Puppy
+  User
 }
