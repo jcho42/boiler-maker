@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./tests/*.spec.js --compilers js:babel-register",
     "start": "node start.js",
     "start-dev": "webpack -w & nodemon start.js"
   },
@@ -24,6 +24,7 @@
     "passport-google-oauth": "^2.0.0",
     "pg": "^8.3.3",
     "pg-hstore": "^2.3.3",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
@@ -38,8 +39,19 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-enzyme": "^1.0.0-beta.1",
+    "chai-things": "^0.2.0",
     "css-loader": "^4.3.0",
+    "mocha": "^8.1.3",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.13.1",
+    "sinon": "^9.0.3",
+    "sinon-as-promised": "^4.0.3",
     "style-loader": "^1.2.1",
+    "supertest": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
